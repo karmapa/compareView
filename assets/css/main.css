@@ -1,0 +1,29 @@
+/* header */
+#tabArea {
+  padding-left: 3.4em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#pageId {
+  display: inline;
+  font-size: 1.6em;
+}
+
+ul {
+  display: inline-table;
+  width: 100%;
+}
+
+.nav > li {
+  display: inline-block;
+}
+
+.nav > li > a {
+  display: inline-block;
+}
+
+#controlledTab {
+  display: inline;
+}
+
