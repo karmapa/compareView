@@ -12,7 +12,7 @@
 
 ul {
   display: inline-table;
-  width: 100%;
+  width: calc(100% - 3.4em);
 }
 
 .nav > li {

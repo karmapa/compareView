@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 import {Tabs, Tab} from 'react-bootstrap';
+import TabPane1 from './TabPane1';
+import TabPane2 from './TabPane2';
 
 class App extends Component {
   render() {
+    let t1 = 'lj-1.7a';
+    let t2 = 'dg-1.5a';
     return (
       <header id="tabArea">
-        <div id="pageId">1.5a</div>
         <Tabs defaultActiveKey={1} id="controlledTab">
-          <Tab eventKey={1} title="Tab 1">Tab 1 content</Tab>
-          <Tab eventKey={2} title="Tab 2">Tab 2 content</Tab>
+          <Tab eventKey={1} title={t1}><TabPane1 /></Tab>
+          <Tab eventKey={2} title={t2}><TabPane2 /></Tab>
         </Tabs>
       </header>
     );
