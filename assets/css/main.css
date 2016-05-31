@@ -27,3 +27,6 @@ ul {
   display: inline;
 }
 
+#tabPane1, #tabPane2 {
+  width: calc(100% - 3.4em);
+}

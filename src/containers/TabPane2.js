@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
+import ImageZoomer from './ImageZoomer/ImageZoomer.js';
 
-class TabPane1 extends Component {
+class TabPane2 extends Component {
   render() {
     return (
-      <div id="tabPane1">
+      <div id="tabPane2">
         <div className="pageImg">
-          <img src="http://res.cloudinary.com/www-dharma-treasure-org/image/upload/lijiang/001/001-005a.jpg" />
+          <ImageZoomer src="http://res.cloudinary.com/www-dharma-treasure-org/image/upload/lijiang/001/001-005a.jpg"/>
         </div>
       </div>
     );
   }
 }
 
-export default TabPane1;
+export default TabPane2;
