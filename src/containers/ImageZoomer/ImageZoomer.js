@@ -229,7 +229,6 @@ export default class ImageZoomer extends Component {
 
   render() {
 
-    const styles = require('./ImageZoomer.scss');
     const {translateX, translateY, percent, isDragging, isHolding} = this.state;
     const {src} = this.props;
 
