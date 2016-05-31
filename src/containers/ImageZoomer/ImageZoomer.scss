@@ -1,0 +1,84 @@
+.imageZoomer {
+  vertical-align: top;
+  cursor: url(data:application/octet-stream;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABLElEQVR4nMyUvRGDMAyFadKkoKGhSUOTgiZ3dGnSULAAK7ACKzALK7ACK7ACKzh+tgXyD3+pojudZM76eM/miKKdKMtSZFkmZBvLvO3tPQQ0TSMQ0zRhLS7D67pWw0KMCoC1Dr3mcJnpIbAoCgsARS6QepmvU2pDqkK9ftlIR5BuQl2VWz2sD8OwqDVKbWVkgVTq8xROv8IZ8C0z8WzShlVlOAjedV0YCEBIAZ71fS/mebaq2jUul1OFLMccShVDeO5WgJndj8yHeylYpLCOzRRbQLhgdv0LISg2480E3QIe2fWsc2jbtqrnFee4Z9ez7kIR/GLOqvPOE1BKUnVFnXeeZpBnxXr72zsRsJKbQUpYfJqaRyfsWirNQMIS67upv/1w/yK+AAAA//8DALIZ7IbL/LHBAAAAAElFTkSuQmCC), auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #333333;
+  background-color: #000000;
+  height: calc(50vh - 50px);
+  &:global(.holding) {
+    cursor: url(data:application/octet-stream;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABBElEQVR4nOyUMQ6DMAxFs7B0YGFh6cLSgaUSW5cuDFyAs3AFzsIVuEKuwBW4gpsf4tZECglShw61ZNkJ9ovtoCj1Fylt21JVVWTc/BsQ2kRb34NnyTAJCfmISwKjgmVZbOo4jsTy8TVth2pqmgbQMgpFYEy03io1eldH83Wn2iRUOk0Treu6sx7wYbQ4nN88z+8k7PkWYMREgagOwbIt7EnL88NMo0BcCE5maAgo2u1iM8yRKKHDMFgflteYowM+jV7VwS3jQ+lDIfJiUqvbQfu+t1BWrupMdTso/z6edsIPX0ZA0ErtElnR4s3ZWp18MDKXUAjF+uJs+gPxc/ICAAD//wMAiipkaZweECUAAAAASUVORK5CYII=), auto;
+    .imageZoomable {
+      transition: none;
+    }
+  }
+}
+
+.imageZoomable {
+  transition: all .1s;
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: initial;
+  transition-delay: initial;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+:global(.image-zoomer-toolbar) {
+  transition: all .1s;
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: initial;
+  transition-delay: initial;
+  color: hsla(0,0%,100%,.7);
+  display: inline-block;
+  opacity: 1;
+  text-align: center;
+  position: absolute;
+  bottom: .7em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18.4em;
+
+  button {
+    color: hsla(0,0%,100%,.7);
+    background: rgba(0,0,0,.5);
+    border: 1px solid hsla(0,0%,100%,.7);
+    float: left;
+    font-size: 2em;
+    padding-top: 0;
+    padding-bottom: 9;
+    height: 1.1em;
+    line-height: .01;
+    &:hover {
+      color: rgba(255, 255, 255, .8);
+    }
+  }
+  :global(.button-minus), :global(.button-add) {
+    width: 1em;
+    overflow: hidden;
+    i {
+      font-size: 0.5em;
+    }
+  }
+  :global(.input) {
+    color: hsla(0,0%,100%,.7);
+    background: rgba(0,0,0,.5);
+    border: 1px solid hsla(0,0%,100%,.7);
+    text-align: center;
+    height: 2.2em;
+    width: 8em;
+    float: left;
+    border-left: transparent;
+    border-right: transparent;
+  }
+}
