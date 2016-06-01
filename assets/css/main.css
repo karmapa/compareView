@@ -30,3 +30,11 @@ ul {
 #tabPane1, #tabPane2 {
   width: calc(100% - 3.4em);
 }
+
+.image-zoomer-toolbar {
+  opacity: 0;
+}
+
+.imageZoomer:hover .image-zoomer-toolbar {
+  opacity: 1;
+}
