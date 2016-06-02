@@ -79,7 +79,6 @@ export default class ImageZoomer extends Component {
   };
 
   onMouseDown = e => {
-    console.log(e.clientX);
     const mouse = this.mouse;
     mouse.event = e;
     // prevent image downloading in chrome
