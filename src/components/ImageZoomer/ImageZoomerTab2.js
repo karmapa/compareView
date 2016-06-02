@@ -1,5 +1,5 @@
 import Animator from './Animator';
-import ImageZoomerToolbar from '../ImageZoomerToolbar/ImageZoomerToolbar';
+import ImageZoomerToolbarTab2 from '../ImageZoomerToolbar/ImageZoomerToolbarTab2';
 import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
@@ -264,7 +264,7 @@ export default class ImageZoomer extends Component {
     return (
       <div {...divProps}>
         <img {...imgProps} />
-        <ImageZoomerToolbar {...imageZoomerToolbarProps} />
+        <ImageZoomerToolbarTab2 {...imageZoomerToolbarProps} />
       </div>
     );
   }
