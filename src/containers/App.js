@@ -21,8 +21,8 @@ class AppComponent extends Component {
     return (
       <header id="tabArea">
         <Tabs defaultActiveKey={1} id="controlledTab" onSelect={this.handleSelect}>
-          <Tab eventKey={1} title={t1}></Tab>
-          <Tab eventKey={2} title={t2}></Tab>
+          <Tab eventKey={1} title={t1} />
+          <Tab eventKey={2} title={t2} />
         </Tabs>
         <TabPane1 />
         <TabPane2 />
