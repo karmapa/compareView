@@ -4,7 +4,7 @@ import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import shallowCompare from 'react-addons-shallow-compare';
-import './ImageZoomer.scss'
+import './ImageZoomer.scss';
 
 const MOVING_SPEED = 1.3;
 const DELTA_PERCENT = 25;

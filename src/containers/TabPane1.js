@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ImageZoomer from './ImageZoomer/ImageZoomer.js';
+import ImageZoomer from '../components/ImageZoomer/ImageZoomer.js';
 
 class TabPane1 extends Component {
   render() {

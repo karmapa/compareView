@@ -10,7 +10,7 @@
   &:global(.holding) {
     cursor: url(data:application/octet-stream;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABBElEQVR4nOyUMQ6DMAxFs7B0YGFh6cLSgaUSW5cuDFyAs3AFzsIVuEKuwBW4gpsf4tZECglShw61ZNkJ9ovtoCj1Fylt21JVVWTc/BsQ2kRb34NnyTAJCfmISwKjgmVZbOo4jsTy8TVth2pqmgbQMgpFYEy03io1eldH83Wn2iRUOk0Treu6sx7wYbQ4nN88z+8k7PkWYMREgagOwbIt7EnL88NMo0BcCE5maAgo2u1iM8yRKKHDMFgflteYowM+jV7VwS3jQ+lDIfJiUqvbQfu+t1BWrupMdTso/z6edsIPX0ZA0ErtElnR4s3ZWp18MDKXUAjF+uJs+gPxc/ICAAD//wMAiipkaZweECUAAAAASUVORK5CYII=), auto;
     .imageZoomable {
-    transition: none;
+      transition: none;
     }
   }
 }
