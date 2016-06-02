@@ -38,3 +38,13 @@ ul {
 .imageZoomer:hover .image-zoomer-toolbar {
   opacity: 1;
 }
+
+#pbText {
+  padding-top: 0.2em;
+  padding-right: 0px;
+  padding-bottom: 0.2em;
+  padding-left: 0px;
+  font-family: Amdo Classic,BiauKai,DFKai-SB;
+  font-size: 1.8em;
+  line-height: 1.5em;
+}
