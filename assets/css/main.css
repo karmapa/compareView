@@ -72,3 +72,7 @@ ul {
   font-size: 1.8em;
   line-height: 1.5em;
 }
+
+.bgRed {
+  background-color: red;
+}

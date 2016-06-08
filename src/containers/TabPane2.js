@@ -3,10 +3,18 @@ import ImageZoomerTab2 from '../components/ImageZoomer/ImageZoomerTab2.js';
 import {connect} from 'react-redux';
 
 class TabPane2Component extends Component {
-  setLineBreak (text) {
+  setLineBreak (text, compareText) {
     let arr = text.split('\r\n');
+    let count = 0;
     let output = arr.map((line, idx) => {
-      return <div key={idx}>{line}</div>;
+      let match;
+      if (line.match(compareText) && count < 1) {
+        match = compareText;
+        line = line.split(compareText);
+        return <div key={idx}>{line[0]}<span className="bgRed">{match}</span>{line[1]}</div>
+      } else {
+        return <div key={idx}>{line}</div>;
+      }
     });
     return output;
   }
@@ -24,7 +32,7 @@ class TabPane2Component extends Component {
         <div id="tabPane2">
           <ImageZoomerTab2 tabKey="tab2" src={imgSrc}/>
           <div id="pbText">
-            {this.setLineBreak(text)}
+            {this.setLineBreak(text, this.props.state.compareText)}
           </div>
         </div>
       );

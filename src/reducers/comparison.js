@@ -5,7 +5,7 @@ import comparePbList from '../../assets/data/comparePbList.js';
 const textName1 = Object.keys(text1);
 const textName2 = Object.keys(text2);
 const oldPages = Object.keys(text1[textName1]);
-const initCompareText = text1[textName1][oldPages[0]].match(/.+? /)[0];
+const initCompareText = text1[textName1][oldPages[0]].match(/.+?[་ ]/)[0];
 
 const initialState = {
   tabKey: 1,
@@ -35,7 +35,7 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false
         };
       } else {
-        let compareText = text1[textName1][state.pages[state.pageNumber + 1]].match(/.+? /)[0];
+        let compareText = text1[textName1][state.pages[state.pageNumber + 1]].match(/.+?[་ ]/)[0];
         return {
           ...state,
           warnPre: false,
@@ -57,7 +57,7 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false
         };
       } else {
-        let compareText = text1[textName1][state.pages[state.pageNumber - 1]].match(/.+? /)[0];
+        let compareText = text1[textName1][state.pages[state.pageNumber - 1]].match(/.+?[་ ]/)[0];
         return {
           ...state,
           warnNext: false,
