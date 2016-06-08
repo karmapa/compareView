@@ -4,13 +4,19 @@ import {connect} from 'react-redux';
 
 class TabPane2Component extends Component {
   render() {
+    let text = this.props.state.text2;
+    let arr = this.props.state.currentPage2.split('.');
+    let currentVolStr = ('00' + arr[0]).substr(arr[0].length - 1, 3);
+    let currentPageStr = ('00' + arr[1]).substr(arr[1].length - 2, 4);
+    let imgSrc = 'http://res.cloudinary.com/www-dharma-treasure-org/image/upload/' 
+                  + 'lijiang/' + currentVolStr + '/' + currentVolStr + '-' 
+                  + currentPageStr + '.jpg';
     if (2 === this.props.state.tabKey) {
       return (
         <div id="tabPane2">
-          <ImageZoomerTab2 tabKey="tab2" src="http://res.cloudinary.com/www-dharma-treasure-org/image/upload/lijiang/001/001-005a.jpg"/>
+          <ImageZoomerTab2 tabKey="tab2" src={imgSrc}/>
           <div id="pbText">
-            དེ་ནས་བྲམ་ཟེ་དེས་བྲམ་ཟེའི་ཁྱེའུ་དེ་ལ་འོངས་པ་ལེགས་སོ་ཞེས་བྱ་བའི་ཚིག་གིས་ཀུན་དུwfwefwefwfwe
-            དེ་ནས་བྲམ་ཟེ་དེས་བྲམ་ཟེའི་ཁྱེའུ་དེ་ལ་འོངས་པ་ལེགས་སོ་ཞེས་བྱ་བའི་ཚིག་གིས་ཀུན་དུ
+            {text}
           </div>
         </div>
       );
