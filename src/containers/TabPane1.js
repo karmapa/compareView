@@ -3,6 +3,14 @@ import ImageZoomerTab1 from '../components/ImageZoomer/ImageZoomerTab1.js';
 import {connect} from 'react-redux';
 
 class TabPane1Component extends Component {
+  setLineBreak (text) {
+    let arr = text.split('\r\n');
+    let output = arr.map((line, idx) => {
+      return <div key={idx}>{line}</div>;
+    });
+    return output;
+  }
+
   render() {
     let text = this.props.state.text1;
     let arr = this.props.state.currentPage1.split('.');
@@ -16,7 +24,7 @@ class TabPane1Component extends Component {
         <div id="tabPane1">
           <ImageZoomerTab1 tabKey="tab1" src={imgSrc}/>
           <div id="pbText">
-            {text}
+            {this.setLineBreak(text)}
           </div>
         </div>
       );
