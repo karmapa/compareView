@@ -8,8 +8,8 @@ class TabPane2Component extends Component {
     let arr = this.props.state.currentPage2.split('.');
     let currentVolStr = ('00' + arr[0]).substr(arr[0].length - 1, 3);
     let currentPageStr = ('00' + arr[1]).substr(arr[1].length - 2, 4);
-    let imgSrc = 'http://res.cloudinary.com/www-dharma-treasure-org/image/upload/' 
-                  + 'lijiang/' + currentVolStr + '/' + currentVolStr + '-' 
+    let imgSrc = 'http://res.cloudinary.com/www-dharma-treasure-org/image/upload/'
+                  + 'lijiang/' + currentVolStr + '/' + currentVolStr + '-'
                   + currentPageStr + '.jpg';
     if (2 === this.props.state.tabKey) {
       return (
