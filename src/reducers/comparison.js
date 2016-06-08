@@ -5,6 +5,7 @@ import comparePbList from '../../assets/data/comparePbList.js';
 const textName1 = Object.keys(text1);
 const textName2 = Object.keys(text2);
 const oldPages = Object.keys(text1[textName1]);
+const initCompareText = text1[textName1][oldPages[0]].match(/.+? /)[0];
 
 const initialState = {
   tabKey: 1,
@@ -18,6 +19,7 @@ const initialState = {
   text1: text1[textName1][oldPages[0]],
   textName2: textName2,
   text2: text2[textName2][oldPages[0]],
+  compareText: initCompareText,
   themeStyle: 'themeDefault',
   paneText1: true,
   paneText2: true
@@ -33,6 +35,7 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false
         };
       } else {
+        let compareText = text1[textName1][state.pages[state.pageNumber + 1]].match(/.+? /)[0];
         return {
           ...state,
           warnPre: false,
@@ -40,8 +43,9 @@ const reducer = (state = initialState, action) => {
           pageNumber: state.pageNumber + 1,
           currentPage1: state.pages[state.pageNumber + 1],
           currentPage2: comparePbList[state.pages[state.pageNumber + 1]],
+          compareText: compareText,
           text1: text1[textName1][state.pages[state.pageNumber + 1]],
-          text2: text2[textName2][state.pages[state.pageNumber + 1]],
+          text2: text2[textName2][comparePbList[state.pages[state.pageNumber + 1]]],
           pageInput: state.pages[state.pageNumber + 1]
         };
       }
@@ -53,6 +57,7 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false
         };
       } else {
+        let compareText = text1[textName1][state.pages[state.pageNumber - 1]].match(/.+? /)[0];
         return {
           ...state,
           warnNext: false,
@@ -60,8 +65,9 @@ const reducer = (state = initialState, action) => {
           pageNumber: state.pageNumber - 1,
           currentPage1: state.pages[state.pageNumber - 1],
           currentPage2: comparePbList[state.pages[state.pageNumber - 1]],
+          compareText: compareText,
           text1: text1[textName1][state.pages[state.pageNumber - 1]],
-          text2: text2[textName2][state.pages[state.pageNumber - 1]],
+          text2: text2[textName2][comparePbList[state.pages[state.pageNumber - 1]]],
           pageInput: state.pages[state.pageNumber - 1]
         };
       }
