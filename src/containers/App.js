@@ -20,7 +20,6 @@ class AppComponent extends Component {
   }
 
   render() {
-    console.log(this.props.state);
     let t1 = this.props.state.textName1 + ' ' + this.props.state.currentPage1;
     let t2 = this.props.state.textName2 + ' ' + this.props.state.currentPage2;
     return (
