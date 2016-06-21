@@ -5,12 +5,12 @@ import comparePbList from '../../assets/data/comparePbList.js';
 const textName1 = Object.keys(text1);
 const textName2 = Object.keys(text2);
 const oldPages = Object.keys(text1[textName1]);
-const initCompareText = text1[textName1][oldPages[0]].match(/.+?[་ ]/)[0];
 
 const initialState = {
+  comparePbList: comparePbList,
   tabKey: 1,
   currentPage1: oldPages[0],
-  currentPage2: comparePbList[oldPages[0]],
+  currentPage2: comparePbList[oldPages[0]][0],
   pageNumber: 0,
   pages: oldPages,
   warnNext: false,
@@ -19,7 +19,7 @@ const initialState = {
   text1: text1[textName1][oldPages[0]],
   textName2: textName2,
   text2: text2[textName2][oldPages[0]],
-  compareText: initCompareText,
+  comparePos: [comparePbList[oldPages[0]][1], comparePbList[oldPages[0]][2]],
   themeStyle: 'themeDefault',
   paneText1: true,
   paneText2: true
@@ -42,10 +42,10 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false,
           pageNumber: state.pageNumber + 1,
           currentPage1: state.pages[state.pageNumber + 1],
-          currentPage2: comparePbList[state.pages[state.pageNumber + 1]],
-          compareText: compareText,
+          currentPage2: state.comparePbList[state.pages[state.pageNumber + 1]][0],
+          comparePos: [state.comparePbList[state.pages[state.pageNumber + 1]][1], state.comparePbList[state.pages[state.pageNumber + 1]][2]],
           text1: text1[textName1][state.pages[state.pageNumber + 1]],
-          text2: text2[textName2][comparePbList[state.pages[state.pageNumber + 1]]],
+          text2: text2[textName2][state.comparePbList[state.pages[state.pageNumber + 1]][0]],
           pageInput: state.pages[state.pageNumber + 1]
         };
       }
@@ -64,10 +64,10 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false,
           pageNumber: state.pageNumber - 1,
           currentPage1: state.pages[state.pageNumber - 1],
-          currentPage2: comparePbList[state.pages[state.pageNumber - 1]],
-          compareText: compareText,
+          currentPage2: state.comparePbList[state.pages[state.pageNumber - 1]][0],
+          comparePos: [state.comparePbList[state.pages[state.pageNumber - 1]][1], state.comparePbList[state.pages[state.pageNumber - 1]][2]],
           text1: text1[textName1][state.pages[state.pageNumber - 1]],
-          text2: text2[textName2][comparePbList[state.pages[state.pageNumber - 1]]],
+          text2: text2[textName2][state.comparePbList[state.pages[state.pageNumber - 1]][0]],
           pageInput: state.pages[state.pageNumber - 1]
         };
       }

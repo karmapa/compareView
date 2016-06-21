@@ -3,15 +3,18 @@ import ImageZoomerTab2 from '../components/ImageZoomer/ImageZoomerTab2.js';
 import {connect} from 'react-redux';
 
 class TabPane2Component extends Component {
-  setLineBreak (text, compareText) {
-    let arr = text.split('\r\n');
-    let count = 0;
+  spliceString(str, index, count, add) {
+    return str.slice(0, index) + (add || "") + str.slice(index + count);
+  }
+
+  setLineBreak(text, comparePos) {
+    let markedText = this.spliceString(this.spliceString(text, comparePos[0] + comparePos[1], 0, '^'), comparePos[0], 0, '^');
+    let arr = markedText.split('\r\n');
+    console.log(text);
     let output = arr.map((line, idx) => {
-      let match;
-      if (line.match(compareText) && count < 1) {
-        match = compareText;
-        line = line.split(compareText);
-        return <div key={idx}>{line[0]}<span className="bgRed">{match}</span>{line[1]}</div>
+      if (line.match('^')) {
+        line = line.split('^');
+        return <div key={idx}>{line[0]}<span className="bgRed">{line[1]}</span>{line[2]}</div>
       } else {
         return <div key={idx}>{line}</div>;
       }
@@ -32,7 +35,7 @@ class TabPane2Component extends Component {
         <div id="tabPane2">
           <ImageZoomerTab2 tabKey="tab2" src={imgSrc}/>
           <div id="pbText">
-            {this.setLineBreak(text, this.props.state.compareText)}
+            {this.setLineBreak(text, this.props.state.comparePos)}
           </div>
         </div>
       );
