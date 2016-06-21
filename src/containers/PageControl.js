@@ -4,11 +4,11 @@ import {pagePre, pageNext} from '../reducers/comparison.js';
 import {connect} from 'react-redux';
 
 class PageControlComponent extends Component {
-  onPagePre () {
+  onPagePre() {
     store.dispatch(pagePre());
   }
 
-  onPageNext () {
+  onPageNext() {
     store.dispatch(pageNext());
   }
 

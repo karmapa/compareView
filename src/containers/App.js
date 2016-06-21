@@ -8,7 +8,7 @@ import {tabSwitch} from '../reducers/comparison.js';
 import {connect} from 'react-redux';
 
 class AppComponent extends Component {
-  handleSelect (key) {
+  handleSelect(key) {
     store.dispatch(tabSwitch(key));
   }
 
