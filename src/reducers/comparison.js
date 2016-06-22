@@ -35,7 +35,6 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false
         };
       } else {
-        let compareText = text1[textName1][state.pages[state.pageNumber + 1]].match(/.+?[་ ]/)[0];
         return {
           ...state,
           warnPre: false,
@@ -57,7 +56,6 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false
         };
       } else {
-        let compareText = text1[textName1][state.pages[state.pageNumber - 1]].match(/.+?[་ ]/)[0];
         return {
           ...state,
           warnNext: false,

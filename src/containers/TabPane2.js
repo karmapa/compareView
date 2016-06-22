@@ -4,17 +4,16 @@ import {connect} from 'react-redux';
 
 class TabPane2Component extends Component {
   spliceString(str, index, count, add) {
-    return str.slice(0, index) + (add || "") + str.slice(index + count);
+    return str.slice(0, index) + (add || '') + str.slice(index + count);
   }
 
   setLineBreak(text, comparePos) {
     let markedText = this.spliceString(this.spliceString(text, comparePos[0] + comparePos[1], 0, '^'), comparePos[0], 0, '^');
     let arr = markedText.split('\r\n');
-    console.log(text);
     let output = arr.map((line, idx) => {
       if (line.match('^')) {
         line = line.split('^');
-        return <div key={idx}>{line[0]}<span className="bgRed">{line[1]}</span>{line[2]}</div>
+        return <div key={idx}>{line[0]}<span className="bgRed">{line[1]}</span>{line[2]}</div>;
       } else {
         return <div key={idx}>{line}</div>;
       }
