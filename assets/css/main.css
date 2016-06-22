@@ -24,14 +24,20 @@
   bottom: 0;
 }
 
+#pagePre:hover, #pageNext:hover {
+    background-color: #F7F7F7;
+}
+
 #pagePre {
   background-position: 10px 48%;
   left: 4px;
+  outline: none;
 }
 
 #pageNext {
   background-position: -48px 48%;
   right: 4px;
+  outline: none;
 }
 
 ul {
