@@ -1,5 +1,5 @@
-# pageToPageComparisonUI
-page to page comparison UI
+# compareView
+compareView
 
 ##Usage
 ####build environment
