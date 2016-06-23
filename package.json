@@ -1,21 +1,21 @@
 {
-  "name": "page-to-page-comparison-ui",
+  "name": "compareView",
   "version": "0.0.1",
-  "description": "page to page comparison ui",
+  "description": "compareView",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress --colors --hot --inline"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/karmapa/pageToPageComparisonUI.git"
+    "url": "git+https://github.com/karmapa/compareView.git"
   },
   "author": "karmapa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/karmapa/pageToPageComparisonUI/issues"
+    "url": "https://github.com/karmapa/compareView/issues"
   },
-  "homepage": "https://github.com/karmapa/pageToPageComparisonUI#readme",
+  "homepage": "https://github.com/karmapa/compareView#readme",
   "dependencies": {
     "bootstrap-css": "3.0.0",
     "classnames": "2.2.5",
