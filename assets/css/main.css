@@ -79,6 +79,6 @@ ul {
   line-height: 1.5em;
 }
 
-.bgRed {
-  background-color: red;
+.matchHighLight {
+  color: red;
 }

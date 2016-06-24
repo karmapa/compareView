@@ -13,7 +13,7 @@ class TabPane2Component extends Component {
     let output = arr.map((line, idx) => {
       if (line.match('^')) {
         line = line.split('^');
-        return <div key={idx}>{line[0]}<span className="bgRed">{line[1]}</span>{line[2]}</div>;
+        return <div key={idx}>{line[0]}<span className="matchHighLight">{line[1]}</span>{line[2]}</div>;
       } else {
         return <div key={idx}>{line}</div>;
       }
