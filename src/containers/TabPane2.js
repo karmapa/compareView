@@ -27,7 +27,7 @@ class TabPane2Component extends Component {
     let currentVolStr = ('00' + arr[0]).substr(arr[0].length - 1, 3);
     let currentPageStr = ('00' + arr[1]).substr(arr[1].length - 2, 4);
     let imgSrc = 'http://res.cloudinary.com/www-dharma-treasure-org/image/upload/'
-                  + 'lijiang/' + currentVolStr + '/' + currentVolStr + '-'
+                  + 'dege/' + currentVolStr + '/' + currentVolStr + '-'
                   + currentPageStr + '.jpg';
     if (2 === this.props.state.tabKey) {
       return (
