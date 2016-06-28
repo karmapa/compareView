@@ -70,15 +70,17 @@ ul {
 }
 
 #pbText {
+  height: calc(50vh - 0.4em);
+  overflow: auto;
   padding-top: 0.2em;
   padding-right: 0px;
   padding-bottom: 0.2em;
   padding-left: 0px;
   font-family: Amdo Classic,BiauKai,DFKai-SB;
-  font-size: 1.8em;
-  line-height: 1.5em;
+  font-size: 2.2em;
+  line-height: 1.3em;
 }
 
 .matchHighLight {
-  color: red;
+  background-color: #9BF8C8;
 }
