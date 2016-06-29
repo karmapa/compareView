@@ -40,6 +40,22 @@
   outline: none;
 }
 
+#pageInput {
+  border: none;
+  position: fixed;
+  right: 3.1em;
+  top: 0.8em;
+  text-align: center;
+  width: 5.6em;
+  height: 1.8em;
+  font-size: 1.1em;
+}
+
+#pageInput:hover, #pageInput:focus {
+  border: solid 0.05em #CCCCCC;
+  outline: none;
+}
+
 ul {
   display: inline-table;
   width: calc(100% - 3.4em);
