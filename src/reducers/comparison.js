@@ -121,6 +121,7 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: true
         };
       }
+      break;
     case 'THEMESWITCH':
       return {
         ...state,
