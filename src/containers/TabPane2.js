@@ -9,7 +9,7 @@ class TabPane2Component extends Component {
 
   setLineBreak(text, comparePos) {
     let markedText = this.spliceString(this.spliceString(text, comparePos[0] + comparePos[1], 0, '^'), comparePos[0], 0, '^');
-    let arr = markedText.split('\r\n');
+    let arr = markedText.split(/\n/);
     let output = arr.map((line, idx) => {
       if (line.match('^')) {
         line = line.split('^');
