@@ -99,8 +99,11 @@ const reducer = (state = initialState, action) => {
           wrongPageInput: false
         };
       } else if (('Enter' === action.key) && (1 !== state.tabKey)) {
+        let length = Object.keys(state.comparePbList).length;
+        let i = 0;
         for (let key in state.comparePbList) {
-          if (state.pageInput === state.comparePbList[key][state.tabKey - 2]) {
+          i++;
+          if (state.pageInput === state.comparePbList[key][state.tabKey - 2] && i <= length) {
             let pageNumber = state.pages.indexOf(key);
             return {
               ...state,
@@ -111,6 +114,13 @@ const reducer = (state = initialState, action) => {
               currentPage2: state.pageInput,
               comparePos: [comparePbList[key][1], comparePbList[key][2]],
               wrongPageInput: false
+            };
+          }
+          if (i >= length) {
+            return {
+              ...state,
+              pageInput: state.pageInput,
+              wrongPageInput: true
             };
           }
         }
