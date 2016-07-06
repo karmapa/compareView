@@ -38,7 +38,7 @@ const reducer = (state = initialState, action) => {
         };
       } else {
         let obj = {};
-        let pageInput = 'currentPage' + state.tabKey;
+        const pageInput = 'currentPage' + state.tabKey;
         obj.currentPage1 = state.pages[state.pageNumber + 1];
         obj.currentPage2 = state.comparePbList[state.pages[state.pageNumber + 1]][0];
         return {
@@ -63,7 +63,7 @@ const reducer = (state = initialState, action) => {
         };
       } else {
         let obj = {};
-        let pageInput = 'currentPage' + state.tabKey;
+        const pageInput = 'currentPage' + state.tabKey;
         obj.currentPage1 = state.pages[state.pageNumber - 1];
         obj.currentPage2 = state.comparePbList[state.pages[state.pageNumber - 1]][0];
         return {

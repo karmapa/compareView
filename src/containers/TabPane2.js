@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import ImageZoomerTab2 from '../components/ImageZoomer/ImageZoomerTab2.js';
+import ImageZoomerTab from '../components/ImageZoomer/ImageZoomerTab.js';
 import {connect} from 'react-redux';
 
+@connect(state => ({}))
 class TabPane2Component extends Component {
   spliceString(str, index, count, add) {
     return str.slice(0, index) + (add || '') + str.slice(index + count);
@@ -32,7 +33,7 @@ class TabPane2Component extends Component {
     if (2 === this.props.state.tabKey) {
       return (
         <div id="tabPane2">
-          <ImageZoomerTab2 tabKey="tab2" src={imgSrc}/>
+          <ImageZoomerTab tabKey="tab2" src={imgSrc} />
           <div id="pbText">
             {this.setLineBreak(text, this.props.state.comparePos)}
           </div>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ImageZoomerTab1 from '../components/ImageZoomer/ImageZoomerTab1.js';
+import ImageZoomerTab from '../components/ImageZoomer/ImageZoomerTab.js';
 import {connect} from 'react-redux';
 
 class TabPane1Component extends Component {
@@ -22,7 +22,7 @@ class TabPane1Component extends Component {
     if (1 === this.props.state.tabKey) {
       return (
         <div id="tabPane1">
-          <ImageZoomerTab1 tabKey="tab1" src={imgSrc}/>
+          <ImageZoomerTab tabKey="tab1" src={imgSrc}/>
           <div id="pbText">
             {this.setLineBreak(text)}
           </div>
