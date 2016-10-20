@@ -13,12 +13,11 @@ class TabPane1Component extends Component {
 
   render() {
     let text = this.props.state.text1;
-    let arr = this.props.state.currentPage1.split('.');
-    let currentVolStr = ('00' + arr[0]).substr(arr[0].length - 1, 3);
-    let currentPageStr = ('00' + arr[1]).substr(arr[1].length - 2, 4);
-    let imgSrc = 'http://res.cloudinary.com/www-dharma-treasure-org/image/upload/'
-                  + 'lijiang/' + currentVolStr + '/' + currentVolStr + '-'
-                  + currentPageStr + '.jpg';
+    let arr = this.props.state.currentPage1.split('-');
+    let currentVolStr = arr[0] + '-' + arr[1];
+    let currentPageStr = this.props.state.currentPage1;
+    let imgSrc = 'https://s3-ap-southeast-1.amazonaws.com/files.dharma-treasure.org/'
+                  + 'jiangkangyur/jiangkangyur' + currentVolStr + '/' + currentPageStr + '.jpg';
     if (1 === this.props.state.tabKey) {
       return (
         <div id="tabPane1">
